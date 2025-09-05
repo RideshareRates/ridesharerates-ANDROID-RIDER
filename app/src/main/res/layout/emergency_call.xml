@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey4"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="911 Assistance"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="15dp"
+            android:text="You need to give 911 your location and vehicle details."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/icon_location"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/currentLocationSOS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Current Location"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+
+        <ng.max.slideview.SlideView
+            android:id="@+id/slideView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:sv_animateSlideText="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:sv_buttonBackgroundColor="@color/red2"
+            app:sv_buttonImage="@drawable/right_arrow"
+            android:paddingEnd="@dimen/_50ssp"
+            android:paddingStart="@dimen/_20sdp"
+            app:sv_buttonImageDisabled="@drawable/common_google_signin_btn_icon_disabled"
+            app:sv_reverseSlide="false"
+            app:sv_slideBackgroundColor="@color/red2"
+            app:sv_slideText="SWIPE TO CALL 911"
+            app:sv_slideTextColor="@color/white"
+            app:sv_slideTextSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1129,7 +1129,7 @@ public class HomeFragment extends FragmentManagePermission implements OnMapReady
         String destination = destLat + "," + destLng;
 //        String apiKey = getString(R.string.google_android_map_api_key_for_direction); // Android-unrestricted key
 //        String apiKey = getString(R.string.google_android_map_api_key); // Android-restricted key
-        String apiKey = ("AIzaSyAUoq3TgVhTD9jtmQI1kIhMg1glW90oZkc"); // Android-unrestricted key
+        String apiKey = (""); // Android-unrestricted key
 
         GoogleDirectionsApiService api = GoogleDirectionsClient.getClient().create(GoogleDirectionsApiService.class);
 
@@ -5669,7 +5669,7 @@ public class HomeFragment extends FragmentManagePermission implements OnMapReady
     public static void getDistance(String origin, String destination) {
 
         if (VolleySingleton.getInstance(getApplicationContext()).isConnected()) {
-            String url = Constants.getDistance + "origins=" + origin + "&destinations=" + destination + "&" + "key=AIzaSyAJuI_IDQB0lt10U0Obffdr0qFV1soIMh4";
+            String url = Constants.getDistance + "origins=" + origin + "&destinations=" + destination + "&" + "key=";
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -5730,7 +5730,7 @@ public class HomeFragment extends FragmentManagePermission implements OnMapReady
                     Map<String, String> params = new HashMap<>();
 //                    params.put("destinations","jodhpur");
 //                    params.put("origins", "6827+J9V Palasni");
-//                    params.put("key", "AIzaSyAwnPm0pAcIiMcMIeNFRxPmg-6OL_t3YFI");
+//                    params.put("key", "");
                     return params;
                 }
 
